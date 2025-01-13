@@ -24,6 +24,8 @@ int main(void) {
     char nome[20];
     int numero;
     char estado[20];
+    float PIBcapita;
+    float denspopul;
 
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
     
@@ -95,7 +97,11 @@ int main(void) {
     printf("A carta %c%d do estado de %s representa a cidade de %s\n",carta,numero,estado,nome);
     printf("Que tem as seguintes caracteristicas:\n");
     printf("Uma área de %.2fm²\n Com uma população de %d habitantes\n Um PIB de R$%.2f\n Com %d pontos turisticos\n",area,popul,PIB,ptturis);
-    printf("Incrível! Parece uma boa cidade para se morar!");
+    PIBcapita = PIB / (float)popul;
+    printf("o PIB per capita é de R$%.2f\n",PIBcapita);
+    denspopul = (float)popul / area;
+    printf("A densidade populacional é de %.2f\n",denspopul);
+    printf("Incrível! Parece uma boa cidade para se morar!\n");
 
     
     // Exibição dos Dados das Cartas:
